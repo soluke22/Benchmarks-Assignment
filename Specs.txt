@@ -1,0 +1,8 @@
+CPU Brand: Intel
+CPU Model: i7-8565U
+Number of Cores: 4 Cores
+Clock Rate: 1.8 GHz
+Memory: 8 GB
+Memory Speed: Unable to Find
+Type of Hard Drive: SSD
+This was all I could find
