@@ -9,17 +9,17 @@ class benchmarks
 {
     public: 
     void integer_benchmark(){
-      long sum;
+      double sum;
       sum = 0;
-      for(long i = 0; i < pow(10,11);i++){
+      for(double i = 0; i < 100000000000;i++){
       sum += 1;
       }         
       sum = 0;
-      for(long i = 0; i < 5*(pow(10,10));i++){
+      for(double i = 0; i < 50000000000;i++){
         sum *= 2;
       }
       sum = pow(10,11);
-      for(long  i = 0; i < 2*(pow(10,10));i++){
+      for(double i = 0; i < 20000000000;i++){
         sum /= 2;
       }
     }
