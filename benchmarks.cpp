@@ -9,15 +9,15 @@ using namespace std;
         long long sum;
         sum = 0;
         for(long i = 0; i < 100000000001;i++){
-        sum += 1;
+        sum = 1+1;
         }         
         sum = 1;
         for(long i = 0; i < 50000000001;i++){
-            sum *= 2;
+            sum = 2*2;
         }
         sum = 10000000000000000000000000002;
         for(long i = 0; i < 20000000001;i++){
-            sum /= 2;
+            sum = 2/2;
         }
         time(&end); 
         double time_taken = double(end - start);
@@ -30,15 +30,15 @@ using namespace std;
         long double sum;
         sum = 0;
         for(long double i = 0; i < 100000000001;i++){
-        sum += 1;
+        sum = 1+1;
         }         
         sum = 1;
         for(long double i = 0; i < 50000000001;i++){
-            sum *= 2;
+            sum = 2*2;
         }
         sum = 100000000002;
         for(long double i = 0; i < 20000000001;i++){
-            sum /= 2;
+            sum = 2/2;
         }
         time(&end); 
         double time_taken = double(end - start);
@@ -68,5 +68,5 @@ int main(){
     floating_point_benchmark();
     memory_benchmark();
     return 0;
-    
+
 }
