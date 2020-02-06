@@ -7,7 +7,7 @@ class benchmarks
 {
     public: 
     void integer_benchmark(){
-      long sum;
+      long long sum;
       sum = 0;
       for(long i = 0; i < 100000000000;i++){
       sum += 1;
