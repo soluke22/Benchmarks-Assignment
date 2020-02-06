@@ -60,8 +60,12 @@ using namespace std;
     void hard_drive_benchmark(){
         ofstream file;
         file.open("filetoopen.txt");
-        for(long long i; i < 10; i++){
+        cin.getline(text, sizeof(text));
+        for(long long i; i < 1000000000; i++){
             file << i << endl;
+        }
+        for(long long i; i < 1000000000; i++){
+            file >> text;
         }
         file.close();
 
