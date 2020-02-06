@@ -58,6 +58,8 @@ using namespace std;
     }
 
     void hard_drive_benchmark(){
+        time_t start, end; 
+        time(&start);
         ofstream file;
         file.open("filetoopen.txt");
         cin.getline(text, sizeof(text));
@@ -68,7 +70,9 @@ using namespace std;
             file >> text;
         }
         file.close();
-
+        time(&end);
+        double time_taken = double(end - start);
+        cout << "The time taken for the memory benchmark is  " << time_taken <<  " seconds" << endl;
     }
 
 
