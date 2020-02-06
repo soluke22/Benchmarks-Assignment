@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 class benchmarks
 {
     public: 
@@ -14,11 +13,11 @@ class benchmarks
       for(double i = 0; i < 100000000000;i++){
       sum += 1;
       }         
-      sum = 0;
+      sum = 1;
       for(double i = 0; i < 50000000000;i++){
         sum *= 2;
       }
-      sum = pow(10,11);
+      sum = 100000000000;
       for(double i = 0; i < 20000000000;i++){
         sum /= 2;
       }
