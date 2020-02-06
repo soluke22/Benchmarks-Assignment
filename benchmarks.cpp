@@ -51,11 +51,8 @@ class benchmarks
 
 int main(){
 
-    benchmarks test;
-    
-    test.integer_benchmark();
-    time(&end); 
-    double time_taken = double(end - start);
-    cout << "The time taken for the integer benchmark is " << time_taken << endl;
+    benchmarks benchmark;
+    benchmark.integer_benchmark();
+    benchmark.floating_point_benchmark();
     return 0;
 }
