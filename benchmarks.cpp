@@ -28,6 +28,8 @@ class benchmarks
     }
 
     void floating_point_benchmark(){
+        time_t start, end; 
+        time(&start);
         long double sum;
         sum = 0;
         for(long double i = 0; i < 100000000000;i++){
@@ -41,6 +43,9 @@ class benchmarks
         for(long double i = 0; i < 20000000000;i++){
             sum /= 2;
         }
+        time(&end); 
+        double time_taken = double(end - start);
+        cout << "The time taken for the floating benchmark is  " << time_taken << endl;
     }
 };
 
