@@ -42,10 +42,10 @@ using namespace std;
     void memory_benchmark(){
         time_t start, end; 
         time(&start);
-        long double a[100000000];
-        long double b[100000000];
-        for(int i = 0; i < 6; i++){
-        for(long  i = 0; i < 100000001; i++){
+        long double a[10000000];
+        long double b[10000000];
+        for(int i = 0; i < 60; i++){
+        for(long  i = 0; i < 10000001; i++){
             a[i] = i;
         }
         for(long i = 0; i < 100000001; i++){
@@ -62,12 +62,17 @@ using namespace std;
         time(&start);
         ofstream file;
         file.open("filetoopen.txt");
-        cin.getline(text, sizeof(text));
-        for(long long i; i < 1000000000; i++){
-            file << i << endl;
+        char *memory;
+        for(long long i; i < 1000000001; i++){
+            char j = '2';
+            memory = new char;
+            file.write(memory, sizeof(4));
         }
-        for(long long i; i < 1000000000; i++){
-            file >> text;
+        file.close();
+        ifstream newfile;
+        newfile.open("filetoopen.txt");
+        while(!newfile.eof()){
+            newfile.read(memory,sizeof(4));
         }
         file.close();
         time(&end);
@@ -78,9 +83,9 @@ using namespace std;
 
 int main(){
 
-    //integer_benchmark();
-    //floating_point_benchmark();
-    //memory_benchmark();
+    integer_benchmark();
+    floating_point_benchmark();
+    memory_benchmark();
     hard_drive_benchmark();
     return 0;
 
