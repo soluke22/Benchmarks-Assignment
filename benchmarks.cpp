@@ -1,8 +1,7 @@
 #include <iostream>
 #include <cmath>
-#include <chrono>
+#include <bits/stdc++.h> 
 using namespace std;
-
 
 class benchmarks
 {
@@ -17,7 +16,7 @@ class benchmarks
       for(double i = 0; i < 50000000000;i++){
         sum *= 2;
       }
-      sum = 100000000000;
+      sum = 100000000002;
       for(double i = 0; i < 20000000000;i++){
         sum /= 2;
       }
@@ -25,11 +24,13 @@ class benchmarks
 };
 
 int main(){
-    using namespace std::chrono;
+
     benchmarks test;
-    auto start = high_resolution_clock::now();
+    time_t start, end; 
+    time(&start); 
     test.integer_benchmark();
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
-    cout << "The run time is " << duration.count() << endl;
+    time(&end); 
+    double time_taken = double(end - start);
+    cout << "The time taken for the integer benchmark is " << time_taken << endl;
+    return 0;
 }
