@@ -44,7 +44,7 @@ using namespace std;
         time(&start);
         long double a[10000000];//this array is causing segment faults
         long double b[10000000];//so is this one
-        for(int i = 0; i < 60; i++){
+        for(int i = 0; i < 60; i++){//this does the same thing 60 times to maybe hopefully work
         for(long  i = 0; i < 10000001; i++){
             a[i] = 1;
         }
