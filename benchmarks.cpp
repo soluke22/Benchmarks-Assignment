@@ -7,42 +7,36 @@ using namespace std;
         time_t start, end; 
         time(&start); 
         long long sum;
-        sum = 0;
         for(long i = 0; i < 100000000001;i++){
-        sum = 1+1;
+          sum = 1+1;
         }         
-        sum = 1;
         for(long i = 0; i < 50000000001;i++){
-            sum = 2*2;
+          sum = 2*2;
         }
-        sum = 10000000000000000000000000002;
         for(long i = 0; i < 20000000001;i++){
-            sum = 2/2;
+          sum = 2/2;
         }
         time(&end); 
         double time_taken = double(end - start);
-        cout << "The time taken for the integer benchmark is  " << time_taken << endl;
+        cout << "The time taken for the integer benchmark is  " << time_taken <<  "seconds" << endl;
     }
 
     void floating_point_benchmark(){
         time_t start, end; 
         time(&start);
         long double sum;
-        sum = 0;
         for(long double i = 0; i < 100000000001;i++){
         sum = 1+1;
         }         
-        sum = 1;
         for(long double i = 0; i < 50000000001;i++){
             sum = 2*2;
         }
-        sum = 100000000002;
         for(long double i = 0; i < 20000000001;i++){
             sum = 2/2;
         }
         time(&end); 
         double time_taken = double(end - start);
-        cout << "The time taken for the floating benchmark is  " << time_taken << endl;
+        cout << "The time taken for the floating benchmark is  " << time_taken <<  "seconds" << endl;
     }
 
     void memory_benchmark(){
@@ -58,7 +52,7 @@ using namespace std;
         }
         time(&end);
         double time_taken = double(end - start);
-        cout << "The time taken for the memory benchmark is  " << time_taken << endl;
+        cout << "The time taken for the memory benchmark is  " << time_taken <<  "seconds" << endl;
     }
 
 
