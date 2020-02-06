@@ -15,7 +15,7 @@ using namespace std;
         for(long i = 0; i < 50000000001;i++){
             sum *= 2;
         }
-        sum = 100000000002;
+        sum = 10000000000000000000000000002;
         for(long i = 0; i < 20000000001;i++){
             sum /= 2;
         }
@@ -68,4 +68,5 @@ int main(){
     floating_point_benchmark();
     memory_benchmark();
     return 0;
+    
 }
