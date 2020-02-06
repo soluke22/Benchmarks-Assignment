@@ -3,23 +3,20 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
-class benchmarks
-{
-    public: 
     void integer_benchmark(){
         time_t start, end; 
         time(&start); 
         long long sum;
         sum = 0;
-        for(long i = 0; i < 100000000000;i++){
+        for(long i = 0; i < 100000000001;i++){
         sum += 1;
         }         
         sum = 1;
-        for(long i = 0; i < 50000000000;i++){
+        for(long i = 0; i < 50000000001;i++){
             sum *= 2;
         }
         sum = 100000000002;
-        for(long i = 0; i < 20000000000;i++){
+        for(long i = 0; i < 20000000001;i++){
             sum /= 2;
         }
         time(&end); 
@@ -32,15 +29,15 @@ class benchmarks
         time(&start);
         long double sum;
         sum = 0;
-        for(long double i = 0; i < 100000000000;i++){
+        for(long double i = 0; i < 100000000001;i++){
         sum += 1;
         }         
         sum = 1;
-        for(long double i = 0; i < 50000000000;i++){
+        for(long double i = 0; i < 50000000001;i++){
             sum *= 2;
         }
         sum = 100000000002;
-        for(long double i = 0; i < 20000000000;i++){
+        for(long double i = 0; i < 20000000001;i++){
             sum /= 2;
         }
         time(&end); 
@@ -53,10 +50,10 @@ class benchmarks
         time(&start);
         int a[5000000000];
         int b[5000000000];
-        for(long long i = 0; i < 5000000000; i++){
+        for(long long i = 0; i < 5000000001; i++){
             a[i] = 2;
         }
-        for(long long i = 0; i < 5000000000; i++){
+        for(long long i = 0; i < 5000000001; i++){
             a[i] = a[i];
         }
         time(&end);
@@ -64,13 +61,11 @@ class benchmarks
         cout << "The time taken for the memory benchmark is  " << time_taken << endl;
     }
 
-    
-};
 
 int main(){
 
-    benchmarks benchmark;
-    benchmark.integer_benchmark();
-    benchmark.floating_point_benchmark();
+    integer_benchmark();
+    floating_point_benchmark();
+    memory_benchmark();
     return 0;
 }
