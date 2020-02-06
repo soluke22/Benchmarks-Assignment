@@ -47,6 +47,24 @@ class benchmarks
         double time_taken = double(end - start);
         cout << "The time taken for the floating benchmark is  " << time_taken << endl;
     }
+
+    void memory_benchmark(){
+        time_t start, end; 
+        time(&start);
+        int a[5000000000];
+        int b[5000000000];
+        for(long long i = 0; i < 5000000000; i++){
+            a[i] = 2;
+        }
+        for(long long i = 0; i < 5000000000; i++){
+            a[i] = a[i];
+        }
+        time(&end);
+        double time_taken = double(end - start);
+        cout << "The time taken for the memory benchmark is  " << time_taken << endl;
+    }
+
+    
 };
 
 int main(){
