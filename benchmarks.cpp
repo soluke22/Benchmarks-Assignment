@@ -42,13 +42,15 @@ using namespace std;
     void memory_benchmark(){
         time_t start, end; 
         time(&start);
-        long long a[5000000000];
-        long long b[5000000000];
-        for(long long i = 0; i < 5000000001; i++){
-            a[i] = 2;
+        long double a[100000000];
+        long double b[100000000];
+        for(int i = 0; i < 6; i++){
+        for(long  i = 0; i < 100000001; i++){
+            a[i] = i;
         }
-        for(long long i = 0; i < 5000000001; i++){
+        for(long i = 0; i < 100000001; i++){
             b[i] = a[i];
+        }
         }
         time(&end);
         double time_taken = double(end - start);
