@@ -7,19 +7,35 @@ class benchmarks
 {
     public: 
     void integer_benchmark(){
-      double sum;
+      long sum;
       sum = 0;
-      for(double i = 0; i < 100000000000;i++){
+      for(long i = 0; i < 100000000000;i++){
       sum += 1;
       }         
       sum = 1;
-      for(double i = 0; i < 50000000000;i++){
+      for(long i = 0; i < 50000000000;i++){
         sum *= 2;
       }
       sum = 100000000002;
-      for(double i = 0; i < 20000000000;i++){
+      for(long i = 0; i < 20000000000;i++){
         sum /= 2;
       }
+    }
+
+    void floating_point_benchmark(){
+        long double sum;
+        sum = 0;
+        for(long double i = 0; i < 100000000000;i++){
+        sum += 1;
+        }         
+        sum = 1;
+        for(long double i = 0; i < 50000000000;i++){
+            sum *= 2;
+        }
+        sum = 100000000002;
+        for(long double i = 0; i < 20000000000;i++){
+            sum /= 2;
+        }
     }
 };
 
