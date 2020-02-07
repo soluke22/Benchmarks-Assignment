@@ -26,7 +26,7 @@ using namespace std;
         time(&start);
         long double sum;
         for(long double i = 0; i < 100000000001;i++){
-        sum = 1+1;
+            sum = 1+1;
         }         
         for(long double i = 0; i < 50000000001;i++){
             sum = 2*2;
@@ -82,11 +82,15 @@ using namespace std;
 
 
 int main(){
-
+    time_t start, end; 
+    time(&start);
     integer_benchmark();
     floating_point_benchmark();
     memory_benchmark();
     hard_drive_benchmark();
+    time(&end);
+    double time_taken = double(end - start);
+    cout << "The total elapsed time is " << time_taken << " seconds." << endl;
     return 0;
 
 }
